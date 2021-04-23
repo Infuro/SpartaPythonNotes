@@ -103,7 +103,7 @@ def hangman():
             if inpt == "y":
                 hangman()
             else:
-                break
+                return limbs_left
 
         # this function takes only a correct input from user
         letter_guess = inputFun(used_guesses)
@@ -118,10 +118,11 @@ def hangman():
                     parts_guessed[iteration] = letter_guess
             continue
 
+        #else guess is incorrect
         else:
             limbs_left = limbs_left - 1
 
-            #logic for losing
+            #logic for loseing
             if limbs_left == 0:
                 print(hangmanpics[0])
                 print("aww you died what a shame")
@@ -129,7 +130,7 @@ def hangman():
                 if inpt == "y":
                     hangman()
                 else:
-                    break
+                    return limbs_left
 
             print(hangmanpics[limbs_left])
             print(f"you have {limbs_left} limbs remaining")
