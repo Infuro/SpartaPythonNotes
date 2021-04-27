@@ -1,12 +1,12 @@
 def fizzbuzz(number: int):
     if number % 3 == 0 and number % 5 == 0:
-        print("fizzbuzz")
+        print("fizzbuzz", end=", ")
     elif number % 5 == 0:
-        print("buzz")
+        print("buzz", end=", ")
     elif number % 3 == 0:
-        print("fizz")
+        print("fizz", end=", ")
     else:
-        pass
+        print(number, end=", ")
 #[(print(i), fizzbuzz(i)) for i in range(1,100)]
 
 def division(int1:int = 4, int2:int = 2) -> float:
