@@ -125,7 +125,7 @@ def hangman():
             #logic for loseing
             if limbs_left == 0:
                 print(hangmanpics[0])
-                print("aww you died what a shame")
+                print(f"aww you died what a shame, the word was {word}")
                 inpt = input("another game? y/n")
                 if inpt == "y":
                     hangman()
